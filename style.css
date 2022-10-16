@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+}
+
+/*MAIN WRAPPER*/
+
+.wrapper {
+    margin: 5em auto;
+}
+
+/*HEADER*/
+
+.main-header {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+.main-header__heading {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: hsl(234, 12%, 34%);
+    font-weight: 400;
+}
+
+.main-header__heading-thin {
+    font-weight: 200;
+}
+
+.main-header__text {
+    color: hsl(229, 6%, 66%);
+    font-size: 1.5rem;
+}
+
+/*CARD SECTION*/
+
+.card {
+    max-width: 300px;
+    background-color: white;
+    border-top: 5px solid hsl(180, 62%, 55%);
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px hsla(229, 6%, 66%, 0.678);
+    margin: 0 auto 3rem auto;
+    padding: 2em;
+}
+
+.card-red {
+    border-top: 5px solid hsl(0, 78%, 62%)
+}
+
+.card-orange {
+    border-top: 5px solid hsl(34, 97%, 64%)
+}
+
+.card-blue {
+    border-top: 5px solid hsl(212, 86%, 64%)
+}
+
+.card__heading {
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+    margin-bottom: 1rem;
+}
+
+.card__text {
+    font-size: 1.4rem;
+    font-weight: 200;
+    color: hsl(229, 6%, 66%);
+    margin-bottom: 1rem;
+}
+
+.card__img {
+    float: right;
+}
+
+/*CLEARFIX*/
+
+.card::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media (min-width: 750px) {
+    .main-header {
+        max-width: 600px;
+    }
+
+    .card-section {
+        max-width: 600px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        column-gap: 3rem;
+    }
+
+    .card {
+        margin: 0 auto 3rem auto;
+
+    }
+}
+
+@media (min-width: 1100px) {
+    .card-section {
+        max-width: 960px;
+        margin: 0 auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .card-cyian {
+        grid-column: 1/2;
+        grid-row: 2/4;
+    }
+
+    .card-red {
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+
+    .card-orange {
+        grid-column: 2/3;
+        grid-row: 3/5;
+    }
+
+    .card-blue {
+        grid-column: 3/4;
+        grid-row: 2/4;
+    }
+}
